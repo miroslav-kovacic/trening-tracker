@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("treningForm");
+  const responseEl = document.getElementById("response");
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -8,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const trening = document.getElementById("trening").value;
     const post = document.getElementById("post").value;
 
-    const formData = new URLSearchParams();
+    const formData = new FormData();
     formData.append("date", date);
     formData.append("trening", trening);
     formData.append("post", post);
@@ -22,14 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await response.json();
 
       if (result.status === "success") {
-        alert("Podaci su uspješno spremljeni!");
+        responseEl.textContent = "Podaci su uspješno spremljeni!";
+        responseEl.style.color = "green";
         form.reset();
       } else {
-        alert("Došlo je do greške: " + result.message);
+        responseEl.textContent = "Greška: " + result.message;
+        responseEl.style.color = "red";
       }
     } catch (error) {
-      console.error("Greška pri slanju:", error);
-      alert("Greška pri slanju podataka.");
+      console.error("Greška:", error);
+      responseEl.textContent = "Greška pri slanju podataka.";
+      responseEl.style.color = "red";
     }
   });
 });
