@@ -11,7 +11,7 @@ document.getElementById("tracker-form").addEventListener("submit", async functio
 
   try {
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbwr9lNqcTV_rlRjwDwpXo2SYPLyGkKsqIzS7DPrl0jCrV1fKpIoBEjYsOUbs7LvuYjK/exec",
+      "https://script.google.com/macros/s/AKfycbxrNHJFE_-_zLhmJ4kdnuGI76kx2T22oQHlmjS47cvEX6TJ8j6hMlTcQFPXvUWR3rYk/exec",
       {
         method: "POST",
         mode: "cors",
