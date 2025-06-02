@@ -1,29 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="hr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Trening Tracker</title>
   <style>
-    body { font-family: sans-serif; padding: 20px; background-color: #f4f4f4; }
-    h1 { color: #333; }
-    label, textarea, button { display: block; margin-top: 10px; width: 100%; }
-    button { padding: 10px; margin-top: 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; }
-    .success { color: green; margin-top: 10px; }
-    .error { color: red; margin-top: 10px; }
+    body {
+      font-family: sans-serif;
+      max-width: 400px;
+      margin: 2em auto;
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+    }
+    button {
+      margin-top: 1.5em;
+    }
   </style>
 </head>
 <body>
   <h1>Trening Tracker</h1>
+
   <form id="treningForm">
-    <input type="date" id="date" required />
-    <input type="text" id="trening" placeholder="Trening" required />
-    <input type="text" id="post" placeholder="Post" required />
+    <label for="date">Datum:</label>
+    <input type="date" id="date" name="date" required />
+
+    <label for="trening">Vrsta treninga:</label>
+    <input type="text" id="trening" name="trening" required />
+
+    <label for="post">Komentar:</label>
+    <input type="text" id="post" name="post" required />
+
     <button type="submit">Pošalji</button>
   </form>
 
-  <div id="status"></div>
+  <p id="response"></p>
 
   <script src="script.js"></script>
 </body>
