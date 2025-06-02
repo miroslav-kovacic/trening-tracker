@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formData.append("post", post);
 
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbzYTLPajnwLLJuPLifz79IKf89w4mLjcliECnMzCSg7xOae7Qbi8xdvUmnjsNRe0OkS/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbyuA4DAiEwSjXIfzsm7FJWNGtVNf_5k2R4-W-IDEVpSWM3SdASIHoigwwgtxdSo5GLv/exec", {
         method: "POST",
         body: formData,
       });
