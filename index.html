@@ -16,17 +16,11 @@
 </head>
 <body>
   <h1>Trening Tracker</h1>
-  <form id="tracker-form">
-    <label for="datum">Datum:</label>
-    <input type="date" id="datum" required />
-
-    <label><input type="checkbox" id="trening" /> Trening odrađen</label>
-    <label><input type="checkbox" id="post" /> Post odrađen</label>
-
-    <label for="komentar">Komentar:</label>
-    <textarea id="komentar" rows="3"></textarea>
-
-    <button type="submit">Spremi</button>
+  <form id="treningForm">
+    <input type="date" id="date" required />
+    <input type="text" id="trening" placeholder="Trening" required />
+    <input type="text" id="post" placeholder="Post" required />
+    <button type="submit">Pošalji</button>
   </form>
 
   <div id="status"></div>
